@@ -104,7 +104,7 @@ fi
 sudo apt install ipset iprange netfilter-persistent -y
 mkdir /root/blocklist
 cd /root/blocklist
-wget https://raw.githubusercontent.com/firehol/firehol/master/contrib/ipset-apply.sh
+wget https://raw.githubusercontent.com/c4pt000/block-vietnam-ip-04-17-2024/main/ipset-apply.sh
 sudo chmod +x ipset-apply.sh
 wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/geolite2_country/country_vn.netset
 wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/datacenters.netset
