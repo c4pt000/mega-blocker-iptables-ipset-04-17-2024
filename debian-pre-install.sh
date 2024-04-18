@@ -7,6 +7,7 @@ module-assistant --verbose --text-mode auto-install xtables-addons
 sudo modprobe xt_geoip
 sudo mkdir -p /usr/share/xt_geoip
 
+# this will disable all ipv6 connections on NIC
 
 echo 'net.ipv6.conf.all.disable_ipv6=1' | sudo tee -a /etc/sysctl.conf
  echo 'net.ipv6.conf.default.disable_ipv6=1' | sudo tee -a /etc/sysctl.conf
