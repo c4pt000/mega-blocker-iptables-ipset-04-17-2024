@@ -23,7 +23,7 @@ tmpname="tmp-$$-${RANDOM}-$(date +%s)"
 exists="no"
 
 # ipsets are searched in this path too.
-base="/etc/firehol/ipsets"
+base="/root/blocklist"
 
 # Default values for iprange reduce mode
 # which optimizes netsets for optimal
