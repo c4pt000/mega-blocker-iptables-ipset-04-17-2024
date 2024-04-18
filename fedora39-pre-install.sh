@@ -8,7 +8,7 @@ wget https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-39.noarch.
 wget https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-39.noarch.rpm
 rpm -Uvh --force --nodeps rpmfusion*rpm
 
-yum download akmods kmodtool akmod-xtables-addons ipset xtables-addons kmod-xtables-addons iptables-devel fail2ban
+yum download akmods kmodtool akmod-xtables-addons ipset xtables-addons kmod-xtables-addons iptables-devel fail2ban -y
 
 rpm -Uvh --force --nodeps *rpm
 cd xtables-addons-3.26/
