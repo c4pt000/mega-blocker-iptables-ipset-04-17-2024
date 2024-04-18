@@ -102,8 +102,8 @@ fi
 # drop traffic and block data-centers
 ```
 sudo apt install ipset iprange netfilter-persistent -y
-mkdir blocklist
-cd blocklist/
+mkdir /root/blocklist
+cd /root/blocklist
 wget https://raw.githubusercontent.com/firehol/firehol/master/contrib/ipset-apply.sh
 sudo chmod +x ipset-apply.sh
 wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/geolite2_country/country_vn.netset
