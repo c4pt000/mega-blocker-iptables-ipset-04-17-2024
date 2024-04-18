@@ -41,13 +41,15 @@ sudo sysctl -p
 
 
 sudo apt install fail2ban -y
+wget https://raw.githubusercontent.com/c4pt000/mega-blocker-iptables-ipset-04-17-2024/main/jail.local
+cp -rf jail.local /etc/fail2ban/jail.local
+
 # Create a new fail2ban jail (editing /etc/fail2ban/jail.local):
 
-
-[tor]
-enabled  = true
-bantime  = 25h
-action   = iptables-allports[name=fail2banTOR, protocol=all]
+#[tor]
+#enabled  = true
+#bantime  = 25h
+#action   = iptables-allports[name=fail2banTOR, protocol=all]
 
 
 #Create a dummy filter file to /etc/fail2ban/filter.d/tor.conf:
