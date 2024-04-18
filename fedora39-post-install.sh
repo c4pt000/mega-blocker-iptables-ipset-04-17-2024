@@ -2,6 +2,9 @@
 chmod +x ip-reset.sh
 sh ip-reset.sh
 
+sudo ufw enable
+sudo ufw reload
+
 #debian bullseye or fedora 39+
 /usr/libexec/xtables-addons/xt_geoip_dl && /usr/libexec/xtables-addons/xt_geoip_build -D "/usr/share/xt_geoip" -S $(find . -type d -name "Geo*")
 
