@@ -108,7 +108,11 @@ wget https://raw.githubusercontent.com/c4pt000/block-vietnam-ip-04-17-2024/main/
 sudo chmod +x ipset-apply.sh
 wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/geolite2_country/country_vn.netset
 wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/datacenters.netset
+wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/geolite2_country/anonymous.netset
+wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/geolite2_country/satellite.netset
 ./ipset-apply.sh country_vn.netset 
-./ipset-apply.sh datacenters.netset 
+./ipset-apply.sh datacenters.netset
+./ipset-apply.sh anonymous.netset
+./ipset-apply.sh satellite.netset
  
 ```
