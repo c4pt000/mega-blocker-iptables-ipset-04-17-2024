@@ -162,7 +162,6 @@ wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/sslproxie
 ./ipset-apply.sh sslproxies_30d.ipset
 ./ipset-apply.sh sslproxies_7d.ipset
 
-wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/
 wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/alienvault_reputation.ipset
 wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/asprox_c2.ipset
 wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/bambenek_banjori.ipset
