@@ -8,8 +8,13 @@ sh ip-reset.sh
 #ubuntu
 /usr/lib/xtables-addons/xt_geoip_dl && /usr/lib/xtables-addons/xt_geoip_build -D "/usr/share/xt_geoip" -S $(find . -type d -name "Geo*")
 
-iptables -I INPUT -m geoip --src-cc VN -j DROP
-iptables -A OUTPUT -m geoip --dst-cc VN -j DROP
+
+# to block by an entire country "Vietnam here"
+#iptables -I INPUT -m geoip --src-cc VN -j DROP
+#iptables -A OUTPUT -m geoip --dst-cc VN -j DROP
+
+
+
 /etc/fail2ban/block-tor.sh
 
 wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/geolite2_country/country_vn.netset
