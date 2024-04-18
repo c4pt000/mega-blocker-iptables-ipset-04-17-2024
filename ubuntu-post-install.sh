@@ -14,6 +14,10 @@ sh ip-reset.sh
 #iptables -A OUTPUT -m geoip --dst-cc VN -j DROP
 
 
+wget https://raw.githubusercontent.com/c4pt000/mega-blocker-iptables-ipset-04-17-2024/main/ipset-apply.sh
+chmod +x ./ipset-apply.sh
+
+
 # this will block all tor-traffic "DO NOT USE IF YOU WANT TO USE THE TOR-BROWSER OR TORD OR TORRIFY ON YOUR HOST
 # uncomment this line to block all tor traffic
 # /etc/fail2ban/block-tor.sh
