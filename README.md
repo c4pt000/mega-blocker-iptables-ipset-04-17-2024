@@ -103,7 +103,7 @@ add to cron with crontab crontab -e
 30 6 * * * cronic /etc/fail2ban/block-tor.sh
 ```
 
-# drop traffic and block data-centers, vpns, open-proxies
+# drop traffic and block data-centers, vpns, open-proxies, malicious ips, darknet ips using clearnet
 ```
 sudo apt install ipset iprange netfilter-persistent -y
 mkdir /root/blocklist
