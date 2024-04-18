@@ -14,8 +14,11 @@ sh ip-reset.sh
 #iptables -A OUTPUT -m geoip --dst-cc VN -j DROP
 
 
-
+# this will block all tor-traffic "DO NOT USE IF YOU WANT TO USE THE TOR-BROWSER OR TORD OR TORRIFY ON YOUR HOST
 /etc/fail2ban/block-tor.sh
+
+
+
 
 #wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/geolite2_country/country_vn.netset
 wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/datacenters.netset
