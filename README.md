@@ -48,7 +48,10 @@ sudo apt install fail2ban -y
 enabled  = true
 bantime  = 25h
 action   = iptables-allports[name=fail2banTOR, protocol=all]
-Create a dummy filter file to /etc/fail2ban/filter.d/tor.conf:
+
+
+#Create a dummy filter file to /etc/fail2ban/filter.d/tor.conf:
+
 [Definition]
 failregex =
 ignoreregex =
