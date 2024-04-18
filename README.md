@@ -110,9 +110,11 @@ wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/geolite2_
 wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/datacenters.netset
 wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/geolite2_country/anonymous.netset
 wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/geolite2_country/satellite.netset
+wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/bruteforceblocker.ipset
 ./ipset-apply.sh country_vn.netset 
 ./ipset-apply.sh datacenters.netset
 ./ipset-apply.sh anonymous.netset
 ./ipset-apply.sh satellite.netset
+./ipset-apply.sh bruteforceblocker.ipset
  
 ```
