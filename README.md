@@ -69,7 +69,7 @@ iptables -A OUTPUT -m geoip --dst-cc VN -j DROP
 ```
 
 
-# dropping and blocks for ALL tor traffic
+# dropping and blocking for ALL tor traffic
 ```
 
  echo 'net.ipv6.conf.all.disable_ipv6=1' | sudo tee -a /etc/sysctl.conf
