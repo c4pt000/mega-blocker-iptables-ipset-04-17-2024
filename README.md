@@ -277,7 +277,6 @@ wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/et_spamha
 wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/et_tor.ipset
 wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/feodo_badips.ipset
 wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/feodo.ipset
-wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/file-list.txt
 wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/firehol_abusers_1d.netset
 wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/firehol_abusers_30d.netset
 wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/firehol_anonymous.netset
@@ -350,7 +349,6 @@ wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/ipblackli
 wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/ipblacklistcloud_recent_7d.ipset
 wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/ipblacklistcloud_recent.ipset
 wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/ipblacklistcloud_top.ipset
-wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/ipip_country
 wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/iw_spamlist.ipset
 wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/iw_wormlist.ipset
 wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/lashback_ubl.ipset
