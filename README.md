@@ -98,3 +98,17 @@ fi
 
 30 6 * * * cronic /etc/fail2ban/block-tor.sh
 ```
+
+# drop traffic and block data-centers
+```
+sudo apt install ipset iprange netfilter-persistent -y
+mkdir blocklist
+cd blocklist/
+wget https://raw.githubusercontent.com/firehol/firehol/master/contrib/ipset-apply.sh
+sudo chmod +x ipset-apply.sh
+wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/geolite2_country/country_vn.netset
+wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/datacenters.netset
+./ipset-apply.sh country_vn.netset 
+./ipset-apply.sh datacenters.netset 
+ 
+```
