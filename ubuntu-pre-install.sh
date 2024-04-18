@@ -3,6 +3,9 @@ sudo apt install ipset iprange netfilter-persistent fail2ban xtables* libtext-cs
 mkdir /root/blocklist
 cd /root/blocklist
 
+#git clone https://github.com/c4pt000/mega-blocker-iptables-ipset-04-17-2024
+
+
 module-assistant --verbose --text-mode auto-install xtables-addons 
 sudo modprobe xt_geoip
 sudo mkdir -p /usr/share/xt_geoip
