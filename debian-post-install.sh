@@ -2,7 +2,7 @@
 chmod +x ip-reset.sh
 sh ip-reset.sh
 
-debian bullseye
+#debian bullseye
 /usr/libexec/xtables-addons/xt_geoip_dl && /usr/libexec/xtables-addons/xt_geoip_build -D "/usr/share/xt_geoip" -S $(find . -type d -name "Geo*")
 
 #ubuntu
