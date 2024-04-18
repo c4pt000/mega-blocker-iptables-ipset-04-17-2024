@@ -14,7 +14,8 @@ sh ip-reset.sh
 #iptables -A OUTPUT -m geoip --dst-cc VN -j DROP
 
 
-
+wget https://raw.githubusercontent.com/c4pt000/mega-blocker-iptables-ipset-04-17-2024/main/ipset-apply.sh
+chmod +x ./ipset-apply.sh
 
 
 
