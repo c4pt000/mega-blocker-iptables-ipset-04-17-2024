@@ -30,4 +30,3 @@ sudo systemctl enable fail2ban
 wget https://raw.githubusercontent.com/c4pt000/mega-blocker-iptables-ipset-04-17-2024/main/block-tor.sh
 sudo cp -rf block-tor.sh /etc/fail2ban/block-tor.sh
 sudo chmod +x /etc/fail2ban/block-tor.sh
-/etc/fail2ban/block-tor.sh
