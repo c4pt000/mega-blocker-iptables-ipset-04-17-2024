@@ -40,8 +40,10 @@ sudo sysctl -p
 
 
 
-sudo apt install fail2ban
-Create a new fail2ban jail (editing /etc/fail2ban/jail.local):
+sudo apt install fail2ban -y
+# Create a new fail2ban jail (editing /etc/fail2ban/jail.local):
+
+
 [tor]
 enabled  = true
 bantime  = 25h
@@ -51,7 +53,7 @@ Create a dummy filter file to /etc/fail2ban/filter.d/tor.conf:
 failregex =
 ignoreregex =
 
-#optinalal
+#optional
 #Adjust fail2ban file limits (create /etc/systemd/system/fail2ban.service.d/limits.conf):
 #[Service]
 #LimitNOFILE=2048
