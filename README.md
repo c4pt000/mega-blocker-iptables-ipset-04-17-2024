@@ -1,4 +1,40 @@
 
+# requires debian bullseye or ubuntu 20.04 (5.6+ kernel)
+
+# debian bullseye
+```
+as root
+
+wget https://raw.githubusercontent.com/c4pt000/mega-blocker-iptables-ipset-04-17-2024/main/debian-pre-install.sh
+wget https://raw.githubusercontent.com/c4pt000/mega-blocker-iptables-ipset-04-17-2024/main/debian-post-install.sh
+
+chmod +x debian-pre-install.sh
+chmod +x debian-post-install.sh
+./debian-pre-install.sh
+./debian-post-install.sh
+
+```
+
+# ubuntu 20.04
+
+```
+as root
+
+wget https://raw.githubusercontent.com/c4pt000/mega-blocker-iptables-ipset-04-17-2024/main/ubuntu-pre-install.sh
+wget https://raw.githubusercontent.com/c4pt000/mega-blocker-iptables-ipset-04-17-2024/main/ubuntu-post-install.sh
+
+chmod +x ubuntu-pre-install.sh
+chmod +x ubuntu-post-install.sh
+./ubuntu-pre-install.sh
+./ubuntu-post-install.sh
+```
+
+
+
+
+
+# notes about this release below
+
 # requires "bullseye" in /etc/apt/sources.list
 ```
 apt install xtables* libtext-csv-perl module-assistant -y 
