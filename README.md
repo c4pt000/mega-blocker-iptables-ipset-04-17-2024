@@ -28,3 +28,20 @@ chmod -R 777 /usr/lib/xtables-addons
 iptables -I INPUT -m geoip --src-cc VN -j DROP
 iptables -A OUTPUT -m geoip --dst-cc VN -j DROP
 ```
+
+
+# dropping tor traffic
+```
+apt-get install ipset
+
+ipset create tor iphash
+
+curl -sSL "https://check.torproject.org/cgi-bin/TorBulkExitList.py?ip=$(curl icanhazip.com)" | sed '/^#/d' | while read IP; do
+  ipset -q -A tor $IP
+done
+
+# Note: This should run as daily cronjob.
+
+# Block ipset with iptables:
+iptables -A INPUT -m set --match-set tor src -j DROP
+```
