@@ -307,17 +307,7 @@ wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/iblocklis
 wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/iblocklist_ciarmy_malicious.netset
 wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/iblocklist_cidr_report_bogons.netset
 wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/iblocklist_cruzit_web_attacks.netset
-wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/iblocklist_isp_aol.netset
-wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/iblocklist_isp_att.netset
-wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/iblocklist_isp_cablevision.netset
-wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/iblocklist_isp_charter.netset
-wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/iblocklist_isp_comcast.netset
-wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/iblocklist_isp_embarq.netset
-wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/iblocklist_isp_qwest.netset
-wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/iblocklist_isp_sprint.netset
-wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/iblocklist_isp_suddenlink.netset
-wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/iblocklist_isp_twc.netset
-wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/iblocklist_isp_verizon.netset
+
 wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/iblocklist_malc0de.netset
 wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/iblocklist_onion_router.netset
 wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/iblocklist_org_activision.netset
@@ -601,17 +591,7 @@ wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/yoyo_adse
 ./ipset-apply.sh iblocklist_ciarmy_malicious.netset
 ./ipset-apply.sh iblocklist_cidr_report_bogons.netset
 ./ipset-apply.sh iblocklist_cruzit_web_attacks.netset
-./ipset-apply.sh iblocklist_isp_aol.netset
-./ipset-apply.sh iblocklist_isp_att.netset
-./ipset-apply.sh iblocklist_isp_cablevision.netset
-./ipset-apply.sh iblocklist_isp_charter.netset
-./ipset-apply.sh iblocklist_isp_comcast.netset
-./ipset-apply.sh iblocklist_isp_embarq.netset
-./ipset-apply.sh iblocklist_isp_qwest.netset
-./ipset-apply.sh iblocklist_isp_sprint.netset
-./ipset-apply.sh iblocklist_isp_suddenlink.netset
-./ipset-apply.sh iblocklist_isp_twc.netset
-./ipset-apply.sh iblocklist_isp_verizon.netset
+
 ./ipset-apply.sh iblocklist_malc0de.netset
 ./ipset-apply.sh iblocklist_onion_router.netset
 ./ipset-apply.sh iblocklist_org_activision.netset
