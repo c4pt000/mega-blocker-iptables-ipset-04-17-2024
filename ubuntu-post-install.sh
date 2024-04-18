@@ -9,7 +9,7 @@ sh ip-reset.sh
 /usr/lib/xtables-addons/xt_geoip_dl && /usr/lib/xtables-addons/xt_geoip_build -D "/usr/share/xt_geoip" -S $(find . -type d -name "Geo*")
 
 
-# to block by an entire country "Vietnam here"
+# to block by an entire country "Vietname here VN"
 #iptables -I INPUT -m geoip --src-cc VN -j DROP
 #iptables -A OUTPUT -m geoip --dst-cc VN -j DROP
 
