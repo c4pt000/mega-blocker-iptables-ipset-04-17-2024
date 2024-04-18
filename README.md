@@ -1,7 +1,7 @@
 
 # requires debian bullseye or ubuntu 20.04 (5.6+ kernel)
 
-# sets are used from https://github.com/firehol/blocklist-ipsets and maxmind geolite2
+* sets are used from https://github.com/firehol/blocklist-ipsets and maxmind geolite2
 
 
 # debian bullseye
