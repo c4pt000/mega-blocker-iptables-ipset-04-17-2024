@@ -4,6 +4,8 @@
 * sets are used from https://github.com/firehol/blocklist-ipsets and maxmind geolite2
 
 
+* ip-reset.sh is a script to restore iptables to defaults and unload and remove all loaded ipsets
+
 # review [system]-post-install.sh and either comment or uncomment block tor traffic
 
 ```
