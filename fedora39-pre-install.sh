@@ -11,7 +11,7 @@ make -j24
 make -j24 install
 depmod -a
 modprobe xt_geoip
-
+cd ..
 
 sudo mkdir -p /usr/share/xt_geoip
 
