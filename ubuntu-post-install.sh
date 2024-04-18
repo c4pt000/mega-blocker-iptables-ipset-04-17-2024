@@ -2,6 +2,9 @@ wget https://raw.githubusercontent.com/c4pt000/mega-blocker-iptables-ipset-04-17
 chmod +x ip-reset.sh
 sh ip-reset.sh
 
+sudo ufw enable
+sudo ufw reload
+
 #debian bullseye
 #/usr/libexec/xtables-addons/xt_geoip_dl && /usr/libexec/xtables-addons/xt_geoip_build -D "/usr/share/xt_geoip" -S $(find . -type d -name "Geo*")
 
