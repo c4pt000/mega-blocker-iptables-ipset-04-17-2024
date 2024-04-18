@@ -45,54 +45,19 @@ wget https://raw.githubusercontent.com/c4pt000/mega-blocker-iptables-ipset-04-17
 sudo cp -rf jail.local /etc/fail2ban/jail.local
 wget https://raw.githubusercontent.com/c4pt000/mega-blocker-iptables-ipset-04-17-2024/main/tor.conf
 sudo cp -rf tor.conf /etc/fail2ban/filter.d/tor.conf
-# Create a new fail2ban jail (editing /etc/fail2ban/jail.local):
 
-#[tor]
-#enabled  = true
-#bantime  = 25h
-#action   = iptables-allports[name=fail2banTOR, protocol=all]
-
-#Create a dummy filter file to /etc/fail2ban/filter.d/tor.conf:
-#[Definition]
-#failregex =
-#ignoreregex =
-
-#optional
-#Adjust fail2ban file limits (create /etc/systemd/system/fail2ban.service.d/limits.conf):
-#[Service]
-#LimitNOFILE=2048
-#Restart systemctl and fail2ban:
 
 
 sudo systemctl daemon-reload
 sudo service fail2ban restart
 sudo systemctl enable fail2ban
 
-#Create a bash script to download the list of tor exit nodes and add their ips to the fail2ban jail:
+wget https://raw.githubusercontent.com/c4pt000/mega-blocker-iptables-ipset-04-17-2024/main/block-tor.sh
+sudo cp -rf block-tor.sh /etc/fail2ban/block-tor.sh
+sudo chmod +x /etc/fail2ban/block-tor.sh
+/etc/fail2ban/block-tor.sh
 
-
-
-#!/bin/bash
-set -o nounset -o xtrace -o errexit
-
-IPV4_REGEX='^([0-9]{1,3}\.){3}[0-9]{1,3}(\/([0-9]|[1-2][0-9]|3[0-2]))?$'
-IPV6_REGEX='^s*((([0-9A-Fa-f]{1,4}:){7}([0-9A-Fa-f]{1,4}|:))|(([0-9A-Fa-f]{1,4}:){6}(:[0-9A-Fa-f]{1,4}|((25[0-5]|2[0-4]d|1dd|[1-9]?d)(.(25[0-5]|2[0-4]d|1dd|[1-9]?d)){3})|:))|(([0-9A-Fa-f]{1,4}:){5}(((:[0-9A-Fa-f]{1,4}){1,2})|:((25[0-5]|2[0-4]d|1dd|[1-9]?d)(.(25[0-5]|2[0-4]d|1dd|[1-9]?d)){3})|:))|(([0-9A-Fa-f]{1,4}:){4}(((:[0-9A-Fa-f]{1,4}){1,3})|((:[0-9A-Fa-f]{1,4})?:((25[0-5]|2[0-4]d|1dd|[1-9]?d)(.(25[0-5]|2[0-4]d|1dd|[1-9]?d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){3}(((:[0-9A-Fa-f]{1,4}){1,4})|((:[0-9A-Fa-f]{1,4}){0,2}:((25[0-5]|2[0-4]d|1dd|[1-9]?d)(.(25[0-5]|2[0-4]d|1dd|[1-9]?d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){2}(((:[0-9A-Fa-f]{1,4}){1,5})|((:[0-9A-Fa-f]{1,4}){0,3}:((25[0-5]|2[0-4]d|1dd|[1-9]?d)(.(25[0-5]|2[0-4]d|1dd|[1-9]?d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){1}(((:[0-9A-Fa-f]{1,4}){1,6})|((:[0-9A-Fa-f]{1,4}){0,4}:((25[0-5]|2[0-4]d|1dd|[1-9]?d)(.(25[0-5]|2[0-4]d|1dd|[1-9]?d)){3}))|:))|(:(((:[0-9A-Fa-f]{1,4}){1,7})|((:[0-9A-Fa-f]{1,4}){0,5}:((25[0-5]|2[0-4]d|1dd|[1-9]?d)(.(25[0-5]|2[0-4]d|1dd|[1-9]?d)){3}))|:)))(%.+)?s*(\/([0-9]|[1-9][0-9]|1[0-1][0-9]|12[0-8]))?$'
-
-banned_ip_counter=0
-
-for ip in $(curl -fsS https://check.torproject.org/torbulkexitlist); do
-  if ! [[ $ip =~ $IPV4_REGEX || $ip =~ $IPV6_REGEX ]]; then
-      echo "Error: $ip is not a valid IPv4/IPv6 address" >&2
-      continue
-  fi
-
-  sudo fail2ban-client set "tor" banip "$ip"
-  banned_ip_counter="$((banned_ip_counter+1))"
-done
-
-if [[ $banned_ip_counter -lt 1 ]]; then
-  echo "Error: no IP banned" >&2
-fi
+add to cron with crontab crontab -e
 
 #Run the script periodically by adding the following lines to crontab -e (install cronic to be notified via email in case of script failure):
 
