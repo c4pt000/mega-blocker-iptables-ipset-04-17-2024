@@ -4,6 +4,14 @@
 * sets are used from https://github.com/firehol/blocklist-ipsets and maxmind geolite2
 
 
+# review [system]-post-install.sh and either comment or uncomment block tor traffic
+
+```
+# this will block all tor-traffic "DO NOT USE IF YOU WANT TO USE THE TOR-BROWSER OR TORD OR TORRIFY ON YOUR HOST
+# uncomment this line to block all tor traffic
+# /etc/fail2ban/block-tor.sh
+```
+
 # debian bullseye
 ```
 as root
@@ -32,6 +40,19 @@ chmod +x ubuntu-post-install.sh
 ./ubuntu-post-install.sh
 ```
 
+# fedora 39
+
+```
+as root
+
+wget https://raw.githubusercontent.com/c4pt000/mega-blocker-iptables-ipset-04-17-2024/main/fedora39-pre-install.sh
+wget https://raw.githubusercontent.com/c4pt000/mega-blocker-iptables-ipset-04-17-2024/main/fedora39-post-install.sh
+
+chmod +x fedora39-pre-install.sh
+chmod +x fedora39-post-install.sh
+./fedora39-pre-install.sh
+./fedora39-post-install.sh
+```
 
 
 
