@@ -1,6 +1,9 @@
 mkdir /root/blocklist
 cd /root/blocklist
 
+git clone https://github.com/c4pt000/mega-blocker-iptables-ipset-04-17-2024
+cd mega-blocker-iptables-ipset-04-17-2024
+
 wget https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-39.noarch.rpm
 wget https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-39.noarch.rpm
 rpm -Uvh --force --nodeps rpmfusion*rpm
@@ -14,7 +17,7 @@ make -j24
 make -j24 install
 depmod -a
 modprobe xt_geoip
-cd ..
+cd ../..
 
 sudo mkdir -p /usr/share/xt_geoip
 
