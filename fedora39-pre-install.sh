@@ -1,3 +1,6 @@
+mkdir /root/blocklist
+cd /root/blocklist
+
 wget https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-39.noarch.rpm
 wget https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-39.noarch.rpm
 rpm -Uvh --force --nodeps rpmfusion*rpm
