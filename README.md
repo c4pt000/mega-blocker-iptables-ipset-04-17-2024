@@ -230,7 +230,6 @@ wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/coinbl_ho
 wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/coinbl_ips.ipset
 wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/cruzit_web_attacks.ipset
 wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/cta_cryptowall.ipset
-wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/cybercrime.ipset
 wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/darklist_de.netset
 wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/datacenters.netset
 wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/dm_tor.ipset
@@ -343,7 +342,6 @@ wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/iblocklis
 wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/iblocklist_pedophiles.netset
 wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/iblocklist_spamhaus_drop.netset
 wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/iblocklist_yoyo_adservers.netset
-wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/ip2location_country
 wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/ipblacklistcloud_recent_1d.ipset
 wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/ipblacklistcloud_recent_30d.ipset
 wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/ipblacklistcloud_recent_7d.ipset
@@ -525,7 +523,6 @@ wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/yoyo_adse
 ./ipset-apply.sh coinbl_ips.ipset
 ./ipset-apply.sh cruzit_web_attacks.ipset
 ./ipset-apply.sh cta_cryptowall.ipset
-./ipset-apply.sh cybercrime.ipset
 ./ipset-apply.sh darklist_de.netset
 ./ipset-apply.sh datacenters.netset
 ./ipset-apply.sh dm_tor.ipset
