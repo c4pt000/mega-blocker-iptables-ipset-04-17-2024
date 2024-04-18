@@ -99,7 +99,7 @@ fi
 30 6 * * * cronic /etc/fail2ban/block-tor.sh
 ```
 
-# drop traffic and block data-centers
+# drop traffic and block data-centers, vpns, open-proxies
 ```
 sudo apt install ipset iprange netfilter-persistent -y
 mkdir /root/blocklist
@@ -120,5 +120,48 @@ wget https://raw.githubusercontent.com/c4pt000/block-vietnam-ip-04-17-2024/main/
 ./ipset-apply.sh bruteforceblocker.ipset
 ./ipset-apply.sh cybercrime.ipset
 ./ipset-apply.sh new-vpn.ipset
+
+
+wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/proxylists.ipset
+wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/proxylists_1d.ipset
+wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/proxylists_30d.ipset
+wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/proxylists_7d.ipset
+wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/proxyspy_1d.ipset
+wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/proxyspy_30d.ipset
+wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/proxyspy_7d.ipset
+wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/proxz.ipset
+wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/proxz_1d.ipset
+wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/proxz_30d.ipset
+wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/proxz_7d.ipset
+wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/socks_proxy.ipset
+wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/socks_proxy_1d.ipset
+wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/socks_proxy_30d.ipset
+wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/socks_proxy_7d.ipset
+wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/sslproxies.ipset
+wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/sslproxies_1d.ipset
+wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/sslproxies_30d.ipset
+wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/sslproxies_7d.ipset
+
+./ipset-apply.sh proxylists.ipset
+./ipset-apply.sh proxylists_1d.ipset
+./ipset-apply.sh proxylists_30d.ipset
+./ipset-apply.sh proxylists_7d.ipset
+./ipset-apply.sh proxyspy_1d.ipset
+./ipset-apply.sh proxyspy_30d.ipset
+./ipset-apply.sh proxyspy_7d.ipset
+./ipset-apply.sh proxz.ipset
+./ipset-apply.sh proxz_1d.ipset
+./ipset-apply.sh proxz_30d.ipset
+./ipset-apply.sh proxz_7d.ipset
+./ipset-apply.sh socks_proxy.ipset
+./ipset-apply.sh socks_proxy_1d.ipset
+./ipset-apply.sh socks_proxy_30d.ipset
+./ipset-apply.sh socks_proxy_7d.ipset
+./ipset-apply.sh sslproxies.ipset
+./ipset-apply.sh sslproxies_1d.ipset
+./ipset-apply.sh sslproxies_30d.ipset
+./ipset-apply.sh sslproxies_7d.ipset
+
+
  
 ```
