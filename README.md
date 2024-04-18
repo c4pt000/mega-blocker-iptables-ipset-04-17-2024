@@ -112,13 +112,13 @@ wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/geolite2_
 wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/geolite2_country/satellite.netset
 wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/bruteforceblocker.ipset
 wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/cybercrime.ipset
-wget https://raw.githubusercontent.com/c4pt000/block-vietnam-ip-04-17-2024/main/vpn.ipset
+wget https://raw.githubusercontent.com/c4pt000/block-vietnam-ip-04-17-2024/main/new-vpn.ipset
 ./ipset-apply.sh country_vn.netset 
 ./ipset-apply.sh datacenters.netset
 ./ipset-apply.sh anonymous.netset
 ./ipset-apply.sh satellite.netset
 ./ipset-apply.sh bruteforceblocker.ipset
 ./ipset-apply.sh cybercrime.ipset
-./ipset-apply.sh vpn.ipset
+./ipset-apply.sh new-vpn.ipset
  
 ```
