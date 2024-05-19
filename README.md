@@ -124,7 +124,7 @@ add to cron with crontab crontab -e
 
 #Run the script periodically by adding the following lines to crontab -e (install cronic to be notified via email in case of script failure):
 
-30 6 * * * cronic /etc/fail2ban/block-tor.sh
+30 6 * * * /etc/fail2ban/block-tor.sh
 ```
 
 # drop traffic and block data-centers, vpns, open-proxies, malicious ips, darknet ips using clearnet
