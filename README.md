@@ -95,6 +95,24 @@ iptables -I INPUT -m geoip --src-cc VN -j DROP
 iptables -A OUTPUT -m geoip --dst-cc VN -j DROP
 ```
 
+# experimental block vpn and anonymous ips
+
+```
+#!/bin/sh
+while :
+do
+wget https://github.com/firehol/blocklist-ipsets/raw/master/firehol_anonymous.netset
+wget https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/geolite2_country/anonymous.netset
+wget https://raw.githubusercontent.com/c4pt000/block-vietnam-ip-04-17-2024/main/ipset-apply.sh
+sudo chmod +x ipset-apply.sh
+./ipset-apply.sh anonymous.netset
+./ipset-apply.sh firehol_anonymous.netset
+rm -rf anonymous.netset
+rm -rf firehol_anonymous.netset
+echo 'next run 1 hour'
+sleep 3600s
+done
+```
 
 # dropping and blocking for ALL tor traffic
 ```
