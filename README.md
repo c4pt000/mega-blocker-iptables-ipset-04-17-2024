@@ -1,3 +1,6 @@
+# original source
+# https://github.com/firehol/blocklist-ipsets
+
 # script is designed to keep unwanted traffic out of apache2 or nginx web servers
 
 # requires debian bullseye or ubuntu 20.04 (5.4+ kernel)
