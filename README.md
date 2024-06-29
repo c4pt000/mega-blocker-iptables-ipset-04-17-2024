@@ -1,3 +1,9 @@
+# harden nginx to block clickjack and missing X-Frame and HSTS response via /etc/nginx/nginx.conf (or the sub-server.conf in /etc/nginx/)
+
+```
+https://raw.githubusercontent.com/c4pt000/kernel-6.8.2-expSEHDsec-HAXM-cgroupvirtio/master/nginx-block-garbage.txt
+```
+
 # original source
 # https://github.com/firehol/blocklist-ipsets
 
