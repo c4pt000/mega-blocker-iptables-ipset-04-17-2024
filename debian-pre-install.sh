@@ -1,4 +1,4 @@
-sudo apt install ipset iprange netfilter-persistent fail2ban xtables* libtext-csv-perl module-assistant dh-sequence-dkms -y 
+sudo apt install ipset iprange netfilter-persistent fail2ban xtables* libtext-csv-perl module-assistant dh-sequence-dkms curl -y 
 
 mkdir /root/blocklist
 cd /root/blocklist
