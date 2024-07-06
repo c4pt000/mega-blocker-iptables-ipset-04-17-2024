@@ -1,5 +1,5 @@
 
-# debian block all tor incoming or outgoing
+# debian 11/12 block all tor incoming or outgoing
 ```
 wget https://raw.githubusercontent.com/c4pt000/mega-blocker-iptables-ipset-04-17-2024/main/debian-pre-install.sh
 chmod +x debian-pre-install.sh
