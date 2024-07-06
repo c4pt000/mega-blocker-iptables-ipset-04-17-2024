@@ -4,8 +4,11 @@
 wget https://raw.githubusercontent.com/c4pt000/mega-blocker-iptables-ipset-04-17-2024/main/debian-pre-install.sh
 chmod +x debian-pre-install.sh
 ./debian-pre-install.sh
-/etc/fail2ban/block-tor.sh
 
+#first time run
+sh /etc/fail2ban/block-tor.sh
+
+#then as a cron job to update once an hour
 crontab -e
 0 * * * * /etc/fail2ban/block-tor.sh
 ```
