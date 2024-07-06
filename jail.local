@@ -2,3 +2,8 @@
 enabled  = true
 bantime  = 25h
 action   = iptables-allports[name=fail2banTOR, protocol=all]
+
+[sshd]
+backend=systemd
+bantime  = 25h
+enabled = true
