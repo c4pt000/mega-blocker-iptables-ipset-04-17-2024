@@ -1,3 +1,15 @@
+
+# debian block all tor incoming or outgoing
+```
+wget https://raw.githubusercontent.com/c4pt000/mega-blocker-iptables-ipset-04-17-2024/main/debian-pre-install.sh
+chmod +x debian-pre-install.sh
+./debian-pre-install.sh
+/etc/fail2ban/block-tor.sh
+
+crontab -e
+0 * * * * /etc/fail2ban/block-tor.sh
+```
+
 # harden nginx to block clickjack and missing X-Frame and HSTS response via /etc/nginx/nginx.conf (or the sub-server.conf in /etc/nginx/)
 
 ```
