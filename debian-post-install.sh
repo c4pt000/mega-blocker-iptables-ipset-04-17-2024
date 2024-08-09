@@ -1,18 +1,22 @@
- wget https://raw.githubusercontent.com/c4pt000/mega-blocker-iptables-ipset-04-17-2024/main/ip-reset.sh
-chmod +x ip-reset.sh
-sh ip-reset.sh
-sudo ufw enable
-sudo ufw reload
+
+ # only reset ufw to clear
+ # wget https://raw.githubusercontent.com/c4pt000/mega-blocker-iptables-ipset-04-17-2024/main/ip-reset.sh
+# chmod +x ip-reset.sh
+# sh ip-reset.sh
+# sudo ufw enable
+ # sudo ufw reload
 #debian bullseye
+
+
 /usr/libexec/xtables-addons/xt_geoip_dl && /usr/libexec/xtables-addons/xt_geoip_build -D "/usr/share/xt_geoip" -S $(find . -type d -name "Geo*")
 
 #ubuntu
 #/usr/lib/xtables-addons/xt_geoip_dl && /usr/lib/xtables-addons/xt_geoip_build -D "/usr/share/xt_geoip" -S $(find . -type d -name "Geo*")
 
 
-# to block by an entire country "Vietname here VN"
-#iptables -I INPUT -m geoip --src-cc VN -j DROP
-#iptables -A OUTPUT -m geoip --dst-cc VN -j DROP
+# to block by an entire country "A country here to block by symbol 00"
+#iptables -I INPUT -m geoip --src-cc 00 -j DROP
+#iptables -A OUTPUT -m geoip --dst-cc 00 -j DROP
 
 
 wget https://raw.githubusercontent.com/c4pt000/mega-blocker-iptables-ipset-04-17-2024/main/ipset-apply.sh
